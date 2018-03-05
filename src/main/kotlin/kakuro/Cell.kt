@@ -1,0 +1,3 @@
+package kakuro
+
+interface Cell {}
