@@ -1,17 +1,8 @@
 package kakuro
 
-class KakuroBoard() {
-    private var board:Array<Array<Cell>> = arrayOf(
-        arrayOf(NA, NA, NA, QCell(0,3), QCell(0, 11), NA),
-        arrayOf(NA, QCell(0, 3), QCell(3,20), BLANK, BLANK, NA),
-        arrayOf(QCell(10, 0), BLANK, BLANK, BLANK, BLANK, QCell(0, 16)),
-        arrayOf(QCell(4, 0), BLANK, BLANK, QCell(14, 17), BLANK, BLANK),
-        arrayOf(NA, QCell(23, 0), BLANK, BLANK, BLANK, BLANK),
-        arrayOf(NA, QCell(16, 0), BLANK, BLANK, NA, NA)
-    )
-
-    val width = 6
-    val height = 6
+class KakuroBoard(var board:Array<Array<Cell>>) {
+    val width = board[0].size
+    val height = board.size
 
     fun getValue(x:Int, y:Int):Int {
         return if(board[y][x] is VCell) {

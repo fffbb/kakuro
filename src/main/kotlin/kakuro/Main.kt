@@ -3,7 +3,7 @@ package kakuro
 import java.util.Scanner
 
 fun main(args: Array<String>) {
-    val game = KakuroGame()
+    val game = loadGame("test.kkr")
     while(true) {
         println(game.board)
         var x = inputNum("X: ")

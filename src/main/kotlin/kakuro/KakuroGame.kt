@@ -1,8 +1,6 @@
 package kakuro
 
-class KakuroGame() {
-    var board:KakuroBoard = KakuroBoard()
-
+class KakuroGame(val board:KakuroBoard) {
     fun put(x:Int, y:Int, v:Int) {
         if(board.isQuiz(x, y)) {
             throw IllegalArgumentException("($x, $y) is quiz cell.")
